@@ -14,9 +14,8 @@ import Combine
 class NetworkManager {
     
     static let shared =  NetworkManager()
-    
     let store =  Firestore.firestore()
-    @Published   var studyCards : [StudyCard] = []
+    var studyCards : [StudyCard] = []
     let path  = "StudyCards"
     
     

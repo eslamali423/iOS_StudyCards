@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Repository : ObservableObject{
+class Repository {
     
     func get()  {
         NetworkManager.shared.get()
