@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,13 @@
 		2859167D27CE50EE00DE2ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2859167C27CE50EE00DE2ECB /* Assets.xcassets */; };
 		2859168027CE50EE00DE2ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2859167E27CE50EE00DE2ECB /* LaunchScreen.storyboard */; };
 		2859168927CE518100DE2ECB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2859168827CE518100DE2ECB /* GoogleService-Info.plist */; };
+		2859168E27CE53AB00DE2ECB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2859168D27CE53AB00DE2ECB /* FirebaseFirestore */; };
+		2859169027CE53AB00DE2ECB /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 2859168F27CE53AB00DE2ECB /* FirebaseFirestoreSwift-Beta */; };
+		2859169327CE5E2300DE2ECB /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859169227CE5E2300DE2ECB /* CardTableViewCell.swift */; };
+		2859169B27CE5ED600DE2ECB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859169A27CE5ED600DE2ECB /* Repository.swift */; };
+		2859169E27CE5EE100DE2ECB /* StudyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859169D27CE5EE100DE2ECB /* StudyCard.swift */; };
+		285916A727CE658F00DE2ECB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285916A627CE658F00DE2ECB /* NetworkManager.swift */; };
+		285916AA27CE6D0900DE2ECB /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285916A927CE6D0900DE2ECB /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,11 @@
 		2859167F27CE50EE00DE2ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2859168127CE50EE00DE2ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2859168827CE518100DE2ECB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2859169227CE5E2300DE2ECB /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		2859169A27CE5ED600DE2ECB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		2859169D27CE5EE100DE2ECB /* StudyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyCard.swift; sourceTree = "<group>"; };
+		285916A627CE658F00DE2ECB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		285916A927CE6D0900DE2ECB /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2859168E27CE53AB00DE2ECB /* FirebaseFirestore in Frameworks */,
+				2859169027CE53AB00DE2ECB /* FirebaseFirestoreSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +74,12 @@
 		2859166F27CE50EC00DE2ECB /* StudyCards */ = {
 			isa = PBXGroup;
 			children = (
+				2859169927CE5EA000DE2ECB /* Repository */,
+				2859169827CE5E9900DE2ECB /* Models */,
+				2859169727CE5E8700DE2ECB /* ViewModels */,
+				2859169527CE5E7300DE2ECB /* Views */,
 				2859167027CE50EC00DE2ECB /* AppDelegate.swift */,
 				2859167227CE50EC00DE2ECB /* SceneDelegate.swift */,
-				2859167427CE50EC00DE2ECB /* ViewController.swift */,
 				2859168827CE518100DE2ECB /* GoogleService-Info.plist */,
 				2859167627CE50EC00DE2ECB /* Main.storyboard */,
 				2859167C27CE50EE00DE2ECB /* Assets.xcassets */,
@@ -71,6 +88,40 @@
 				2859167927CE50EC00DE2ECB /* StudyCards.xcdatamodeld */,
 			);
 			path = StudyCards;
+			sourceTree = "<group>";
+		};
+		2859169527CE5E7300DE2ECB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2859167427CE50EC00DE2ECB /* ViewController.swift */,
+				2859169227CE5E2300DE2ECB /* CardTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2859169727CE5E8700DE2ECB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				285916A927CE6D0900DE2ECB /* CardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2859169827CE5E9900DE2ECB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2859169D27CE5EE100DE2ECB /* StudyCard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2859169927CE5EA000DE2ECB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2859169A27CE5ED600DE2ECB /* Repository.swift */,
+				285916A627CE658F00DE2ECB /* NetworkManager.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +140,10 @@
 			dependencies = (
 			);
 			name = StudyCards;
+			packageProductDependencies = (
+				2859168D27CE53AB00DE2ECB /* FirebaseFirestore */,
+				2859168F27CE53AB00DE2ECB /* FirebaseFirestoreSwift-Beta */,
+			);
 			productName = StudyCards;
 			productReference = 2859166D27CE50EC00DE2ECB /* StudyCards.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 2859166427CE50EC00DE2ECB;
+			packageReferences = (
+				2859168C27CE53AB00DE2ECB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 2859166E27CE50EC00DE2ECB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,10 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2859169327CE5E2300DE2ECB /* CardTableViewCell.swift in Sources */,
 				2859167527CE50EC00DE2ECB /* ViewController.swift in Sources */,
 				2859167B27CE50EC00DE2ECB /* StudyCards.xcdatamodeld in Sources */,
+				2859169E27CE5EE100DE2ECB /* StudyCard.swift in Sources */,
+				285916A727CE658F00DE2ECB /* NetworkManager.swift in Sources */,
 				2859167127CE50EC00DE2ECB /* AppDelegate.swift in Sources */,
 				2859167327CE50EC00DE2ECB /* SceneDelegate.swift in Sources */,
+				2859169B27CE5ED600DE2ECB /* Repository.swift in Sources */,
+				285916AA27CE6D0900DE2ECB /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +410,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2859168C27CE53AB00DE2ECB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2859168D27CE53AB00DE2ECB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2859168C27CE53AB00DE2ECB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		2859168F27CE53AB00DE2ECB /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2859168C27CE53AB00DE2ECB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2859167927CE50EC00DE2ECB /* StudyCards.xcdatamodeld */ = {
