@@ -27,7 +27,7 @@ class NetworkManager {
                 return
             }
             
-            
+            print(snapshot)
             self.studyCards = snapshot.documents.compactMap {
             try? $0.data(as: StudyCard.self)
             } ?? []

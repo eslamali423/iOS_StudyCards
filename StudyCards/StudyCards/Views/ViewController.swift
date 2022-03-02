@@ -25,6 +25,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let card  =  StudyCard(question: "eslam??", answer: "eslam...")
         viewModel.add(studyCard: card)
         viewModel.get()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         
         
         
