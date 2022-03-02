@@ -24,7 +24,7 @@ class Observer <T> {
     
     func bind(listner : @escaping ((T?)-> Void))  {
         listner(value)
-        self.listner = listner
+        self.listner = listner 
     }
     
 }

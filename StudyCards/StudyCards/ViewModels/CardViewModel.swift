@@ -20,6 +20,7 @@ class CardViewModel {
     
     func  add( studyCard : StudyCard)  {
         repository.add(studyCard: studyCard)
+ 
     }
     
     

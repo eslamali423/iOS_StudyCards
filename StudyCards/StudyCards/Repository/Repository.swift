@@ -14,7 +14,7 @@ class Repository {
     }
     func add(studyCard : StudyCard)  {
         NetworkManager.shared.add(studyCard: studyCard)
-    }
+    } 
     
     
 }
